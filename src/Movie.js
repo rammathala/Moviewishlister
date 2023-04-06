@@ -19,7 +19,6 @@ function Movie({uid,user}) {
   }, [user]);
   const add = (e) => {
     e.preventDefault();
-    //setmovies([...movies, {name:title, image:url}])
     db.collection("movies").add({
       name: title,
       image: url,
