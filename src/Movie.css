@@ -1,0 +1,155 @@
+.Movie{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('D:\New Projects\movielister\src\Images\wallpaperflare.com_wallpaper.jpg');
+}
+.cardf >form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    width: 90%;
+    
+}
+input{
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    transition:0.3s;
+    border-bottom: 2px solid rgb(4, 179, 223);
+    
+}
+
+.cardf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 430px;
+        height: 280px;
+        background-color: white;
+        padding: 20px 25px;
+        border-radius: 10px;
+}
+.cardf>form > button{
+    margin-top: 20px;
+    margin-bottom: 10px;
+outline: none;
+width: 100%;
+    border: none;
+    padding: 10px 5px;
+    background-color: blueviolet;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.cardf>form >button:active{
+    scale: 0.95;
+}
+.cardf >form > button:hover{
+    background-color: rgb(133, 64, 198);
+}
+.popale{
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 20px 20px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: popo 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.popale > p{
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+.popale >img{
+    width: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.popale >h6{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+@keyframes popo {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+/* loading */
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 3px solid rgb(30, 65, 141);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 20px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    4.9% {
+        top: 20px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5% {
+        top: 20px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,157 @@
+.Header{
+    background-color:whitesmoke;
+    height: 70px;
+    position:fixed;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;    
+align-items: center;
+    justify-content: space-between;
+    
+}
+.login{
+    padding: 0 15px;
+    flex:0.2 ;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.links{
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content:right;  
+  
+}
+.links>p{
+    margin: 0 10px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: 15px;
+}
+
+.logo{
+    padding: 0 15px;
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+ 
+}
+.login > button{
+    outline: none;
+    border: none;
+    padding: 10px 22px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    border: 1px solid black;box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.login > button:active{
+    scale: 0.95;
+}
+.login>button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid grey;
+    font-weight: 600;
+    
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.pimage{
+   height: 55px;
+}
+
+.h2{
+    font-size: 50px;
+    font-family: cursive;
+}
+.text{
+    margin-bottom: -3px;
+    font-family: cursive;
+    letter-spacing: 1px;
+    color: rgb(30, 114, 210);
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+   
+        padding: 5px 15px;
+        border-radius: 5px;
+        color: rgb(244, 242, 242);
+        background-color: rgb(43, 41, 41);
+        transition: 0.3s;
+        
+}
+.links > p:hover{
+    scale: 1.04;
+}
+.use {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.userphoto {
+    border-radius: 50%;
+    height: 50px;
+}
+.signout {
+    border: 1px solid grey;
+    color: white;
+    margin-right: 40px;
+    background-color: black;
+    transition: 0.3s;
+    position: absolute;
+    width: max-content;
+    padding: 5px 15px;
+    border-radius: 5px;
+    top: 60px;
+    z-index: 1;
+    display: inline-block;
+    cursor: pointer;
+    visibility: hidden;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.signout:active {
+    scale: 0.95;
+}
+
+.signout:hover {
+    background-color: rgb(36, 35, 34);
+}
+
+.use:hover .signout {
+    cursor: pointer;
+    visibility: visible;
+
+}
+.signout >li{
+    list-style-type: none;
+    margin: 5px;
+    transition: 0.3s;
+    padding: 10px 25px;
+  
+}
+.signout >li:hover{
+    background-color: rgb(10, 120, 211);
+}
+@media screen and (width<670px) {
+    .signout{
+       right: -10px;
+    } 
+}

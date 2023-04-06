@@ -1,0 +1,174 @@
+.list{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+   padding-top:100px ;
+  
+}
+.Moviecards{
+    margin-top: 25px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+}
+.mocard{
+    height: 280px;
+    width: 450px;
+    background-color: white;
+    
+}
+.mocard > img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.acard{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    width: 450px;
+    justify-content: center;
+    margin: 15px 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    animation: scal 0.4s;
+}
+.acard >h4{
+    background-color: brown;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    border-radius: 7px;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.acard >div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.acard>div>span{
+    margin: 0 10px;
+}
+.mark1,.mark2 {
+    margin: 0 10px !important;
+    padding: 10px !important;
+}
+.mark1{
+    color: rgb(55, 55, 206) !important;
+}
+.mark2{
+    color: red !important;
+}
+.mar{
+    font-size: 27px !important;
+    color: rgb(3, 82, 160);
+}
+.de{
+    font-size: 27px !important;
+    color: rgb(213, 9, 9);
+}
+@keyframes scal {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+.fade{
+    filter: grayscale(100%)
+}
+.Status{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.emp{
+    background-color: white;
+    height:auto;
+    padding: 20px 15px;
+    width: 390px;
+    border-radius: 10px;
+   border: 2px solid whitesmoke; 
+  animation: scal 0.4s;
+
+}
+.emp >div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.emp > div>p{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: red;
+    margin-bottom: -5px;
+}
+.emp >div >h5{
+    font-weight: 500;
+    font-size: 15px;
+    font-family: cursive;
+ letter-spacing: 1.5px;
+}
+.gotoa{
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    background-color:#3794e5;
+    color: white;
+    padding: 10px 15px;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+    transition: 0.3s;
+}
+.gotoa:active{
+    scale: 0.95;
+}
+.gotoa:hover{
+    background-color: #1480df;
+    scale: 1.02;
+    border-radius: 5px;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.whi{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+.count{
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    display: flex;
+    z-index: 0;
+    padding: 5px 15px;
+    //background-color: #2B2B2B;
+    //border: 2px solid whitesmoke;
+    //border-radius: 4px;
+}
+.co{
+    background-color: #2B2B2B;
+ border: 2px solid whitesmoke;
+ color: yellow;
+ border-radius: 50%;
+ padding: 4px 10px;
+ text-align: center;
+ font-weight: 800;
+}
+@media screen and (width > 700px) {
+    .emp{
+        width:auto;
+    }
+    .whi{
+        height:auto;
+        width: 60vw;
+    }
+}

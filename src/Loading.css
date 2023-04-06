@@ -1,0 +1,79 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.Loading{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #2B2B2B;
+}
+.M{
+    font-size: 40px;
+    color: white;
+    font-family: cursive;
+    margin-right: 5px;
+}
+.handpl{
+    height: 50px;
+    margin-left: 5px;
+}
+.loadd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.Loading_names{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader__film {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    display: flex;
+}
+
+.loader__film-img {
+    animation: rotate 1.5s linear infinite;
+}
+
+.h5load {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-top: 10px;
+    font-weight: 700;
+
+}
+
+.h4load {
+    text-align: center;
+    color: yellow;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
