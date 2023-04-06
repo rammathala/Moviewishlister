@@ -16,7 +16,7 @@ function Movie({uid,user}) {
         history("/");
       }
     });
-  }, [user]);
+  }, []);
   const add = (e) => {
     e.preventDefault();
     db.collection("movies").add({
