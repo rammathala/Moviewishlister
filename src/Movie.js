@@ -1,22 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './Movie.css';
 import movsu from './Images/video-camera.png'
-import db, { auth } from './firebase'
-import { MovieContext } from './Moviecontext'
+import db from './firebase'
 import { useNavigate } from 'react-router-dom'
-function Movie({uid,user}) {
- const history = useNavigate()
+function Movie({uid}) {
+ const Navi = useNavigate()
   const [title, settitle] = useState('')
   const [url, seturl] = useState('')
-  const [movies, setmovies] = useContext(MovieContext)
   const [append, setappend] = useState(false);
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      if (!user) {
-        history("/");
-      }
-    });
-  }, []);
   const add = (e) => {
     e.preventDefault();
     db.collection("movies").add({
@@ -29,7 +20,7 @@ function Movie({uid,user}) {
     const push = () => {
        settitle('')
       seturl('')
-      history('/movieslist')
+      Navi('/movieslist')
     }
     setTimeout(push,1000)
     
@@ -47,9 +38,9 @@ function Movie({uid,user}) {
         </div>) : ''}
 <form onSubmit={add}>
             <h5>Name</h5>
-          <input type='text' value={title } onChange={(e)=>settitle(e.target.value)} required></input>
-        <h5>Url</h5>      
-        <input type='url'value={url} onChange={(e)=>seturl(e.target.value)} required></input>
+          <input placeholder='Movie Name..' type='text' value={title } onChange={(e)=>settitle(e.target.value)} required></input>
+        <h5>Image address</h5>      
+        <input placeholder='Paste the Image address..' type='url'value={url} onChange={(e)=>seturl(e.target.value)} required></input>
               <button >Add</button>
           </form>
       </div>
