@@ -4,7 +4,7 @@ import Home from './Home';
 import Movie from './Movie';
 import List from './List';
 import Movieprovider from './Moviecontext';
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import db, { auth, provider } from './firebase';
 import {  useState } from 'react';
 import Loading from './Loading';
@@ -25,7 +25,6 @@ function App() {
           setuser(result.user);
           setuid(result.user.uid);
           
-          
         })
         .catch((error) => {
           alert(error.message);
@@ -37,21 +36,20 @@ function App() {
       setuser(null),
     )
   }
-  return (<>{load ? <Loading/>:<><Movieprovider>
-      <BrowserRouter>
+  return (<Movieprovider>
+    <BrowserRouter>
+      {load ? <Loading/>:
     <div className="App">
           <Header pop={handleAuth} user={user} logoout={logoout } />
           <Routes>
-            <Route path="/" element={<Home pop={handleAuth}  user={user}  />}/>
+            <Route  path="/" element={<Home pop={handleAuth}  user={user}  />}/>
             <Route path={user && '/add'} element={<Movie uid={uid } />} />
-            <Route path={user && "/movieslist"} element={<List user={user} uid={uid } />}  />
+            <Route path={user && "/movieslist"} element={<List user={user} uid={uid} />} />
+            <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
-      
-        </div>
+        </div>}
         </BrowserRouter>
-      </Movieprovider></>}
-     
- </>
+      </Movieprovider>
   );
 }
 
