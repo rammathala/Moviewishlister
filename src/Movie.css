@@ -16,6 +16,10 @@
     width: 90%;
     
 }
+input::placeholder{
+    color: rgb(128, 128, 128,0.4);
+    font-size: 15px;
+}
 input{
     width: 100%;
     padding: 10px 5px;
