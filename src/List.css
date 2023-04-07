@@ -93,9 +93,7 @@
     background-color: white;
     height:auto;
     padding: 20px 15px;
-    width: 390px;
-    border-radius: 10px;
-   border: 2px solid whitesmoke; 
+    width: auto;
   animation: scal 0.4s;
 
 }
@@ -111,6 +109,7 @@
     letter-spacing: 2px;
     color: red;
     margin-bottom: -5px;
+    margin-top: -20px;
 }
 .emp >div >h5{
     font-weight: 500;
@@ -128,6 +127,7 @@
     width: 200px;
     text-align: center;
     transition: 0.3s;
+    margin-bottom: 10px;
 }
 .gotoa:active{
     scale: 0.95;
@@ -138,11 +138,10 @@
     border-radius: 5px;
 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-.whi{
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-}
+ .whi {
+     height: auto;
+     width: 400px;
+ }
 .count{
     position: absolute;
     top: 80px;
@@ -163,12 +162,18 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
  text-align: center;
  font-weight: 800;
 }
-@media screen and (width > 700px) {
-    .emp{
-        width:auto;
+
+@media screen and (width < 706px) {
+    .emp>div>h5{
+        margin-top: 20px;
     }
-    .whi{
-        height:auto;
-        width: 60vw;
+        .whi {
+            height: 350px;
+            width: 380px;
+            object-fit: cover;
+        }
+         .emp{
+                border-radius: 10px;
+                    border: 2px solid whitesmoke;
+         }         
     }
-}
