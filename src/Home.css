@@ -6,7 +6,7 @@
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('D:\New Projects\movielister\src\Images\wallpaperflare.com_wallpaper (1).jpg');
+    background-image: url('D:\New Projects\movielister\src\Images\Cinema elements set.jpg');
 }
 .Content{
     display: flex;
@@ -124,5 +124,13 @@
 @media screen and (width<650px) {
     .Content>h2 {
         font-size: 20px;
+    }
+}
+@media screen and (width < 500px) {
+    .Content{
+        width: 80vw;
+    }
+    .button{
+        width: 250px !important;
     }
 }
