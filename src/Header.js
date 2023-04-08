@@ -25,8 +25,15 @@ function Header({ pop, user, logoout }) {
       {!user ? (<div className='login'>
           <button onClick={pop}>Login</button>
       </div>) : (<div className='login use'>
-           <img className='userphoto' src={user.photoURL} alt='user' />
-          <p className='signout'><li>{user.displayName}</li><li onClick={logou} >Signout</li></p>
+           <img referrerpolicy={'no-referrer'}  className='userphoto' src={user.photoURL} alt='user' />
+          <p className='signout'><li>{user.displayName}</li>
+            <li className='linksn'>
+              <NavLink className='linkn' to={'/Add'}>Add</NavLink>
+            </li>
+            <li className='linksn'>
+               <NavLink className='linkn' to={'/movieslist'}>wishlist</NavLink>
+            </li>
+            <li onClick={logou} >Signout</li></p>
       </div>)}
       </div>
   )
