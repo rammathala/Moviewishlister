@@ -177,3 +177,28 @@ box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1p
                     border: 2px solid whitesmoke;
          }         
     }
+@media screen and (width < 450px) {
+    .acard{
+        width: 380px;
+    }
+        .whi {
+            width: 350px;
+        }
+        .emp{
+            width: 370px;
+            padding: 10px 0;
+        }
+    }
+@media screen and (width < 405px) {
+    .acard {
+        width: 340px;
+    }
+        .acard>h4{
+            margin-top: auto;
+        }
+}
+@media screen and (width < 397px) {
+ .emp{
+    border: none;
+ }
+}
