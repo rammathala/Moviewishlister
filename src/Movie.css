@@ -157,3 +157,17 @@ width: 100%;
         opacity: 0;
     }
 }
+@media screen and (width <600px) {
+    .cardf{
+        width: 380px;
+    }
+}
+@media screen and (width <560px) {
+    .cardf {
+        width: 350px;
+    }
+}@media screen and (width <520px) {
+    .cardf {
+        width: 300px;
+    }
+}
