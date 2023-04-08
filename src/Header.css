@@ -86,7 +86,6 @@ a{
 }
 
 .active{
-   
         padding: 5px 15px;
         border-radius: 5px;
         color: rgb(244, 242, 242);
@@ -154,4 +153,24 @@ a{
     .signout{
        right: -10px;
     } 
+}
+@media screen and (width < 584px) {
+    .links{
+        display: none;
+    }
+    .linkn.active{
+        background-color: transparent;
+        padding: 0;
+            transition: 0.3s;
+        }
+}
+.linkn{
+    color:white !important;
+}
+
+@media screen and (width > 584px) {
+    .linksn {
+            display:none;
+    
+        }
 }
